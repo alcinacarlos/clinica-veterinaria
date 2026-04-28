@@ -1,4 +1,4 @@
-# Clínica Veterinaria - Proyecto Web Seguro
+# Clínica Veterinaria
 
 Este repositorio contiene la documentación y el código de una **aplicación web para una Clínica Veterinaria**. El sistema integra venta de artículos, adopción de mascotas y reserva de servicios veterinarios, aplicando rigurosamente prácticas de desarrollo seguro (DevSecOps) y arquitecturas modernas basadas en frameworks.
 
@@ -69,6 +69,6 @@ Como última barrera de defensa, se ha sometido la aplicación web en ejecución
 ---
 
 ## Despliegue y Ejecución
-
+### Link de la aplicación: [Render](https://clinica-veterinaria-s0s4.onrender.com)
 * **Backend:** Ejecuta con Node.js usando un framework fijo (Express/Nest). Las variables críticas están protegidas mediante gestión de secretos (archivos `.env` en local, Secret Management en Render para producción).
 * **Frontend:** Framework reactivo conectado vía API REST al backend.
