@@ -41,16 +41,9 @@ app.use('/api/services',        serviceRoutes);
 app.use('/api/appointments',    appointmentRoutes);
 app.use('/api/medical-records', medicalRecordRoutes);
 
-// ─── Manejador de rutas no encontradas API ───────────────────
-app.use('/api/*', (req, res) => {
-  res.status(404).json({ error: `Ruta API ${req.method} ${req.originalUrl} no encontrada.` });
-});
-
-// ─── Frontend estático ───────────────────────────────────────
-const path = require('path');
-app.use(express.static(path.join(__dirname, '../frontend/dist')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+// ─── Manejador de rutas no encontradas ──────────────────────
+app.use('*', (req, res) => {
+  res.status(404).json({ error: `Ruta ${req.method} ${req.originalUrl} no encontrada.` });
 });
 
 // ─── Manejador global de errores ─────────────────────────────
